@@ -1,0 +1,90 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Mmmmhmmm</title>
+<script src="jquery-1.10.2.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="main.css">
+    <script>
+    $(document).ready(function(){
+     $("#buttonClAd").click(function(){
+        $("#siteiControl").show(500);
+        $("#sitePortal").css("display","none");
+    });
+       $("#buttonAdLgIn").click(function(){
+        $("#sitePortal").show(500);
+        $("#siteiControl").css("display","none");
+    });
+       $("#imatrixWbMX").click(function(){
+        $("#imatrixMXYes").show(500);
+        $("#3rdpartyMX").css("display","none");
+    });
+       $("#otherMX").click(function(){
+        $("#3rdpartyMX").show(500);
+        $("#imatrixMXYes").css("display","none");
+    });
+         $("#domainWIm").click(function(){
+        $("#domainWImYES").show(500);
+        $("#domainWClYES").css("display","none");
+    });
+       $("#domainWCl").click(function(){
+        $("#domainWClYES").show(500);
+        $("#domainWImYES").css("display","none");
+    });
+});
+    </script>
+    <link rel="stylesheet" type="text/css" href="../iMatrixCheckList/main.css">
+
+
+    <body>
+<div id="content">
+<div id="firstStepBox">  <h2 class="question">What are you trying to do?</h2>
+    <div class="questionButton firstQuestion">Change Name Servers to iMatrix</div>
+  <div class="questionButton firstQuestion">Transfer Domain</div>
+  <div class="questionButton firstQuestion">Adding/Removing DNS Records</div>
+<div class="questionButton firstQuestion">SSL Certificate</div>
+  </div>
+  
+</div>
+
+        <!-- update name servers -->
+        <div id="content">
+  <h1>Updating NameServers to CloudFlare</h1>
+  <h2>Setting Up DNS On Portal</h2>
+  <p>If you are trying to set up the DNS on portal, go to the clients portal and change the DNS type to DNS Only. 
+      <br>Once you do this, then go to BOND and go to Onboarding Information in the orders and update this to DNS as well.
+    </p>
+    <hr>
+  <h2>Is the site on Portal or iControl?<br>(On the bottom of the page, do you see Admin Log In or do you see Client Admin?)</h2>
+    <div id="buttonClAd" class="questionButton">Client Admin</div>
+    
+<div id="buttonAdLgIn" class="questionButton">Admin Log In</div>
+    
+  <h2 class="hide" id="siteiControl">The site is iControl,<br> set the A Records to 98.158.198.14</h2>
+    <h2 class="hide" id="sitePortal">The site is on Portal,<br> set the A Records to 98.158.194.41</h2>
+  <!-- next question -->
+ 
+  <hr>
+  <h2>Are they using our emails or a third party? Use <a href="https://who.is/">who.is</a> or <a href="https://network-tools.com/">Network Tools</a> to check</h2>
+    <div id="imatrixWbMX" class="questionButton">iMatrix Webmail</div>
+<div id="otherMX" class="questionButton">3rd Party</div>
+  <h2 class="hide" id="imatrixMXYes"><u>They are using our Webmail</u><br>If they are using our webmail then proceed to next step. 
+</h2>
+  <h2 class="hide" id="3rdpartyMX"><u>They are using someone else for emails</u><br>Remove ALL CNAMES, MX and TXT records. <br> Either have them email their MX records, or get their log ins and manually enter in the mail records. <br>Once entered, proceed to next step.
+
+</h2>
+      <hr>
+  <h2>Is the Domain in our Registrar or the clients? <br>
+    If the registrar is godaddy, register or enom(sometimes Network Solutions) check with Tier 2 to see if it is in our account.    
+    <br>Use <a href="https://who.is/">who.is</a> or <a href="https://network-tools.com/">Network Tools</a> to check</h2>
+  <div id="domainWIm" class="questionButton">Domain is with iMatrix</div>
+  <div id="domainWCl" class="questionButton">Domain is with client</div>
+  <h2 class="hide" id="domainWImYES"><u>The Domain is with iMatrix</u><br>If the domain is registered with iMatrix and the Name Servers are pointed to either<br> NS1.IMATRIX.COM and NS2.IMATRIX.COM or DNS1.REGISTER.COM and DNS2.REGISTER.COM, <br>create a DOMAINS case to update the Name Servers to CHAN.NS.CLOUDFLARE.COM and DOUG.NS.CLOUDFLARE.COM</h2>
+  <h2 class="hide" id="domainWClYES"><u>The Domain is with the client</u><br>If the domain is in the clients register, either have them or their IT update the Name Servers,<br> do a screen share and update it for them or get their log ins to update the name servers to <br>CHAN.NS.CLOUDFLARE.COM and DOUG.NS.CLOUDFLARE.COM</h2>
+</div>
+        
+        
+    </body>
+</head>
+</html>

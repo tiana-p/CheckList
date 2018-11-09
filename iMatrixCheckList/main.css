@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css?family=PT+Sans');
+
+#content{
+  text-align:center;
+  font-family: 'PT Sans', sans-serif;
+}
+
+.questionButton{
+  width:auto;
+  display:inline-block;
+  padding:25px;
+  border-radius:10px;
+  background-image: radial-gradient(#b7b7e0, #8585e0);
+  cursor:pointer;
+  color:white;
+  font-weight:bold;
+  font-size:16px;
+  min-width:100px;
+}
+.questionButton:hover {
+    background-image: radial-gradient(#e5e5ff, #8585e0);
+    border: solid 1px #b8e6e6;
+    box-shadow: 1px 1px 9px 0px #868686;
+}
+p{
+  font-size:20px;
+  font-weight:bold;
+}
+#content{
+  text-align:center;
+  font-family: 'PT Sans', sans-serif;
+}
+hr {
+    border: solid .5px #c1c1e633;
+}
+.hide{
+  display:none;
+  color:blue;
+}
